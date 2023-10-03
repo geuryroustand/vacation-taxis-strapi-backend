@@ -386,7 +386,13 @@ export interface ApiBookBook extends Schema.CollectionType {
         };
       }>;
     slug: Attribute.UID<'api::book.book', 'tittle'>;
-    seo: Attribute.Component<'shared.seo'> &
+    images: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -405,6 +411,92 @@ export interface ApiBookBook extends Schema.CollectionType {
       'api::book.book'
     >;
     locale: Attribute.String;
+  };
+}
+
+export interface ApiPostPost extends Schema.CollectionType {
+  collectionName: 'posts';
+  info: {
+    singularName: 'post';
+    pluralName: 'posts';
+    displayName: 'Post';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    tittle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.UID<'api::post.post', 'tittle'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::post.post',
+      'oneToMany',
+      'api::post.post'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiSeoLocationSeoLocation extends Schema.CollectionType {
+  collectionName: 'seo_locations';
+  info: {
+    singularName: 'seo-location';
+    pluralName: 'seo-locations';
+    displayName: 'SeoLocation';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    description2: Attribute.RichText;
+    title: Attribute.String;
+    slug: Attribute.UID<'api::seo-location.seo-location', 'title'> &
+      Attribute.Required;
+    description1: Attribute.RichText;
+    description3: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::seo-location.seo-location',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::seo-location.seo-location',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
   };
 }
 
@@ -727,6 +819,8 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::book.book': ApiBookBook;
+      'api::post.post': ApiPostPost;
+      'api::seo-location.seo-location': ApiSeoLocationSeoLocation;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;

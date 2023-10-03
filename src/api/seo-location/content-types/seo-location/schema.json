@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seo_locations",
+  "info": {
+    "singularName": "seo-location",
+    "pluralName": "seo-locations",
+    "displayName": "SeoLocation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description2": {
+      "type": "richtext"
+    },
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "description1": {
+      "type": "richtext"
+    },
+    "description3": {
+      "type": "richtext"
+    }
+  }
+}
