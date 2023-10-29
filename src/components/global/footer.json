@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_global_footer_s",
+  "info": {
+    "displayName": "Footer ",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "followUs": {
+      "type": "string"
+    },
+    "SocialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.social-links"
+    },
+    "CopyRight": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.copyright"
+    }
+  }
+}

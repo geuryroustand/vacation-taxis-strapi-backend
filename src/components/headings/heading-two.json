@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_headings_heading_twos",
+  "info": {
+    "displayName": "HeadingTwo"
+  },
+  "options": {},
+  "attributes": {
+    "headingTwo": {
+      "type": "string"
+    }
+  }
+}

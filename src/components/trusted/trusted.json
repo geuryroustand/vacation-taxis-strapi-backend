@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_trusted_trusteds",
+  "info": {
+    "displayName": "trusted",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "string"
+    },
+    "className": {
+      "type": "string"
+    },
+    "svgName": {
+      "type": "string"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "width": {
+      "type": "integer"
+    },
+    "iconAlt": {
+      "type": "string"
+    }
+  }
+}

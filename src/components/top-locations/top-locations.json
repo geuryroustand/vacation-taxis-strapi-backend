@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_top_locations_top_locations",
+  "info": {
+    "displayName": "TopLocations",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "locations": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "hiden": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

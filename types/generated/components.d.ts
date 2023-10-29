@@ -1,5 +1,150 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface GlobalAwards extends Schema.Component {
+  collectionName: 'components_global_awards';
+  info: {
+    displayName: 'awards';
+  };
+  attributes: {
+    awardHeading: Attribute.String;
+    tripAdvisorHeading: Attribute.String;
+  };
+}
+
+export interface GlobalBookingSearch extends Schema.Component {
+  collectionName: 'components_global_booking_searches';
+  info: {
+    displayName: 'bookingSearch';
+    description: '';
+  };
+  attributes: {
+    inputPickUpPlaceHolder: Attribute.String;
+    inputDropOffPlaceHolder: Attribute.String;
+    passengers: Attribute.String;
+    searchBtn: Attribute.String;
+    isEmptyFeedbackPickUp: Attribute.String;
+    isEmptyFeedbackDropOff: Attribute.String;
+    pickUpText: Attribute.String;
+  };
+}
+
+export interface GlobalCopyright extends Schema.Component {
+  collectionName: 'components_global_copyrights';
+  info: {
+    displayName: 'Copyright';
+    description: '';
+  };
+  attributes: {
+    copyright: Attribute.String;
+    allRights: Attribute.String;
+  };
+}
+
+export interface GlobalFaq extends Schema.Component {
+  collectionName: 'components_global_faqs';
+  info: {
+    displayName: 'Faq';
+    description: '';
+  };
+  attributes: {
+    question: Attribute.String;
+    answer: Attribute.Text;
+  };
+}
+
+export interface GlobalFooter extends Schema.Component {
+  collectionName: 'components_global_footer_s';
+  info: {
+    displayName: 'Footer ';
+    description: '';
+  };
+  attributes: {
+    followUs: Attribute.String;
+    SocialLinks: Attribute.Component<'global.social-links', true>;
+    CopyRight: Attribute.Component<'global.copyright', true>;
+  };
+}
+
+export interface GlobalLink extends Schema.Component {
+  collectionName: 'components_global_links';
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    label: Attribute.String;
+    link: Attribute.String;
+  };
+}
+
+export interface GlobalNavigation extends Schema.Component {
+  collectionName: 'components_navigation_navigations';
+  info: {
+    displayName: 'Navigation';
+    description: '';
+  };
+  attributes: {
+    label: Attribute.String;
+    link: Attribute.String;
+    hidden: Attribute.Boolean & Attribute.DefaultTo<false>;
+  };
+}
+
+export interface GlobalSocialLinks extends Schema.Component {
+  collectionName: 'components_global_social_links';
+  info: {
+    displayName: 'SocialLinks';
+    description: '';
+  };
+  attributes: {
+    platform: Attribute.String;
+    link: Attribute.String;
+    iconName: Attribute.String;
+  };
+}
+
+export interface HeadingsHeadingOne extends Schema.Component {
+  collectionName: 'components_headings_heading_ones';
+  info: {
+    displayName: 'HeadingOne';
+  };
+  attributes: {
+    title: Attribute.String;
+  };
+}
+
+export interface HeadingsHeadingTwo extends Schema.Component {
+  collectionName: 'components_headings_heading_twos';
+  info: {
+    displayName: 'HeadingTwo';
+  };
+  attributes: {
+    headingTwo: Attribute.String;
+  };
+}
+
+export interface HeadingsParagraph extends Schema.Component {
+  collectionName: 'components_headings_paragraphs';
+  info: {
+    displayName: 'Paragraph';
+  };
+  attributes: {
+    paragraph: Attribute.Text;
+  };
+}
+
+export interface HowItWorkHowItWork extends Schema.Component {
+  collectionName: 'components_how_it_work_how_it_works';
+  info: {
+    displayName: 'HowItWork';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.String;
+    iconName: Attribute.String;
+    iconAlt: Attribute.String;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -51,11 +196,68 @@ export interface SharedSeo extends Schema.Component {
   };
 }
 
+export interface TopLocationsTopLocations extends Schema.Component {
+  collectionName: 'components_top_locations_top_locations';
+  info: {
+    displayName: 'TopLocations';
+    description: '';
+  };
+  attributes: {
+    locations: Attribute.String & Attribute.Required & Attribute.Unique;
+    slug: Attribute.String & Attribute.Required;
+    hiden: Attribute.Boolean & Attribute.DefaultTo<false>;
+  };
+}
+
+export interface TrustedTrusted extends Schema.Component {
+  collectionName: 'components_trusted_trusteds';
+  info: {
+    displayName: 'trusted';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    paragraph: Attribute.String;
+    className: Attribute.String;
+    svgName: Attribute.String;
+    height: Attribute.Integer;
+    width: Attribute.Integer;
+    iconAlt: Attribute.String;
+  };
+}
+
+export interface WayOneWay extends Schema.Component {
+  collectionName: 'components_way_one_ways';
+  info: {
+    displayName: 'Way';
+    description: '';
+  };
+  attributes: {
+    oneWay: Attribute.String;
+    return: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'global.awards': GlobalAwards;
+      'global.booking-search': GlobalBookingSearch;
+      'global.copyright': GlobalCopyright;
+      'global.faq': GlobalFaq;
+      'global.footer': GlobalFooter;
+      'global.link': GlobalLink;
+      'global.navigation': GlobalNavigation;
+      'global.social-links': GlobalSocialLinks;
+      'headings.heading-one': HeadingsHeadingOne;
+      'headings.heading-two': HeadingsHeadingTwo;
+      'headings.paragraph': HeadingsParagraph;
+      'how-it-work.how-it-work': HowItWorkHowItWork;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
+      'top-locations.top-locations': TopLocationsTopLocations;
+      'trusted.trusted': TrustedTrusted;
+      'way.one-way': WayOneWay;
     }
   }
 }

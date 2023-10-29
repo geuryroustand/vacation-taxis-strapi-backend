@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_way_one_ways",
+  "info": {
+    "displayName": "Way",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "oneWay": {
+      "type": "string"
+    },
+    "return": {
+      "type": "string"
+    }
+  }
+}

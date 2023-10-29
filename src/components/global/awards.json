@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_global_awards",
+  "info": {
+    "displayName": "awards"
+  },
+  "options": {},
+  "attributes": {
+    "awardHeading": {
+      "type": "string"
+    },
+    "tripAdvisorHeading": {
+      "type": "string"
+    }
+  }
+}

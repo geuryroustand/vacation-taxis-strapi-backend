@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_global_social_links",
+  "info": {
+    "displayName": "SocialLinks",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "iconName": {
+      "type": "string"
+    }
+  }
+}

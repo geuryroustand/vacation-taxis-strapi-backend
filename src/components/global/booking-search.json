@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_global_booking_searches",
+  "info": {
+    "displayName": "bookingSearch",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "inputPickUpPlaceHolder": {
+      "type": "string"
+    },
+    "inputDropOffPlaceHolder": {
+      "type": "string"
+    },
+    "passengers": {
+      "type": "string"
+    },
+    "searchBtn": {
+      "type": "string"
+    },
+    "isEmptyFeedbackPickUp": {
+      "type": "string"
+    },
+    "isEmptyFeedbackDropOff": {
+      "type": "string"
+    },
+    "pickUpText": {
+      "type": "string"
+    }
+  }
+}

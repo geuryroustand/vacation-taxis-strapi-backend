@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_how_it_work_how_it_works",
+  "info": {
+    "displayName": "HowItWork",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "iconName": {
+      "type": "string"
+    },
+    "iconAlt": {
+      "type": "string"
+    }
+  }
+}
