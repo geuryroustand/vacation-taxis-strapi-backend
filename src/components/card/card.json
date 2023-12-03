@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_card_cards",
+  "info": {
+    "displayName": "card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "passenger": {
+      "type": "string"
+    },
+    "suitcase": {
+      "type": "string"
+    },
+    "cancellation": {
+      "type": "string"
+    },
+    "flight": {
+      "type": "string"
+    },
+    "noHidden": {
+      "type": "string"
+    },
+    "trusted": {
+      "type": "string"
+    },
+    "regularPrice": {
+      "type": "string"
+    },
+    "discountedPrice": {
+      "type": "string"
+    },
+    "selectedText": {
+      "type": "string"
+    },
+    "oneWay": {
+      "type": "string"
+    },
+    "roundTrip": {
+      "type": "string"
+    },
+    "selectText": {
+      "type": "string"
+    },
+    "upTo": {
+      "type": "string"
+    }
+  }
+}

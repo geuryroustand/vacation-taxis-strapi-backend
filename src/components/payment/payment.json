@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_payment_payments",
+  "info": {
+    "displayName": "payment"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "selectPayment": {
+      "type": "string"
+    },
+    "paymentCardDesc": {
+      "type": "string"
+    },
+    "paymentCashDesc": {
+      "type": "string"
+    },
+    "paymentCash": {
+      "type": "string"
+    },
+    "agreeLabel": {
+      "type": "string"
+    },
+    "agreeFeedBack": {
+      "type": "string"
+    },
+    "accepting": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "string"
+    },
+    "and": {
+      "type": "string"
+    },
+    "privacy": {
+      "type": "string"
+    },
+    "pay": {
+      "type": "string"
+    },
+    "book": {
+      "type": "string"
+    }
+  }
+}

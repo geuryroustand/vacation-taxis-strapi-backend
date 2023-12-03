@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "about_uses",
+  "collectionName": "terms_and_conditions",
   "info": {
-    "singularName": "about-us",
-    "pluralName": "about-uses",
-    "displayName": "about-us",
-    "description": ""
+    "singularName": "terms-and-condition",
+    "pluralName": "terms-and-conditions",
+    "displayName": "termsAndCondition"
   },
   "options": {
     "draftAndPublish": true
@@ -16,23 +15,6 @@
     }
   },
   "attributes": {
-    "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "uid",
-      "required": true
-    },
-    "content": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext"
-    },
     "title": {
       "pluginOptions": {
         "i18n": {
@@ -40,6 +22,23 @@
         }
       },
       "type": "string"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }

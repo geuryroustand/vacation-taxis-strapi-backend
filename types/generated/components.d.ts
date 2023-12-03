@@ -1,5 +1,40 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CardCard extends Schema.Component {
+  collectionName: 'components_card_cards';
+  info: {
+    displayName: 'card';
+    description: '';
+  };
+  attributes: {
+    passenger: Attribute.String;
+    suitcase: Attribute.String;
+    cancellation: Attribute.String;
+    flight: Attribute.String;
+    noHidden: Attribute.String;
+    trusted: Attribute.String;
+    regularPrice: Attribute.String;
+    discountedPrice: Attribute.String;
+    selectedText: Attribute.String;
+    oneWay: Attribute.String;
+    roundTrip: Attribute.String;
+    selectText: Attribute.String;
+    upTo: Attribute.String;
+  };
+}
+
+export interface FlightDetailFlightDetail extends Schema.Component {
+  collectionName: 'components_flight_detail_flight_details';
+  info: {
+    displayName: 'flightDetail';
+  };
+  attributes: {
+    arrivalAirline: Attribute.String;
+    departureAirline: Attribute.String;
+    flightNumber: Attribute.String;
+  };
+}
+
 export interface GlobalAwards extends Schema.Component {
   collectionName: 'components_global_awards';
   info: {
@@ -145,6 +180,46 @@ export interface HowItWorkHowItWork extends Schema.Component {
   };
 }
 
+export interface PassengerDetailPassengerDetail extends Schema.Component {
+  collectionName: 'components_passenger_detail_passenger_details';
+  info: {
+    displayName: 'passengerDetail';
+    description: '';
+  };
+  attributes: {
+    firstName: Attribute.String;
+    lastName: Attribute.String;
+    email: Attribute.String;
+    phoneNumberText: Attribute.String;
+    firstNameInvalidFeedback: Attribute.String;
+    lastNameInvalidFeedback: Attribute.String;
+    emailInvalidFeedback: Attribute.String;
+    emailPlacerHolder: Attribute.String;
+  };
+}
+
+export interface PaymentPayment extends Schema.Component {
+  collectionName: 'components_payment_payments';
+  info: {
+    displayName: 'payment';
+  };
+  attributes: {
+    heading: Attribute.String;
+    selectPayment: Attribute.String;
+    paymentCardDesc: Attribute.String;
+    paymentCashDesc: Attribute.String;
+    paymentCash: Attribute.String;
+    agreeLabel: Attribute.String;
+    agreeFeedBack: Attribute.String;
+    accepting: Attribute.String;
+    terms: Attribute.String;
+    and: Attribute.String;
+    privacy: Attribute.String;
+    pay: Attribute.String;
+    book: Attribute.String;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -241,6 +316,8 @@ export interface WayOneWay extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'card.card': CardCard;
+      'flight-detail.flight-detail': FlightDetailFlightDetail;
       'global.awards': GlobalAwards;
       'global.booking-search': GlobalBookingSearch;
       'global.copyright': GlobalCopyright;
@@ -253,6 +330,8 @@ declare module '@strapi/types' {
       'headings.heading-two': HeadingsHeadingTwo;
       'headings.paragraph': HeadingsParagraph;
       'how-it-work.how-it-work': HowItWorkHowItWork;
+      'passenger-detail.passenger-detail': PassengerDetailPassengerDetail;
+      'payment.payment': PaymentPayment;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
       'top-locations.top-locations': TopLocationsTopLocations;

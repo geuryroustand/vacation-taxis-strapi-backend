@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_flight_detail_flight_details",
+  "info": {
+    "displayName": "flightDetail"
+  },
+  "options": {},
+  "attributes": {
+    "arrivalAirline": {
+      "type": "string"
+    },
+    "departureAirline": {
+      "type": "string"
+    },
+    "flightNumber": {
+      "type": "string"
+    }
+  }
+}
