@@ -741,13 +741,46 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String;
-    slug: Attribute.UID<'api::blog.blog', 'title'>;
-    excerpt: Attribute.Text;
-    description: Attribute.RichText;
-    cover: Attribute.Media;
-    seo: Attribute.Component<'shared.seo'>;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.UID<'api::blog.blog', 'title'> & Attribute.Required;
+    excerpt: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.RichText &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    cover: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -755,56 +788,10 @@ export interface ApiBlogBlog extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
       Attribute.Private;
-  };
-}
-
-export interface ApiBookBook extends Schema.CollectionType {
-  collectionName: 'books';
-  info: {
-    singularName: 'book';
-    pluralName: 'books';
-    displayName: 'book';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    tittle: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    slug: Attribute.UID<'api::book.book', 'tittle'>;
-    images: Attribute.Media &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    seo: Attribute.Component<'shared.seo', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::book.book', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::book.book', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
     localizations: Attribute.Relation<
-      'api::book.book',
+      'api::blog.blog',
       'oneToMany',
-      'api::book.book'
+      'api::blog.blog'
     >;
     locale: Attribute.String;
   };
@@ -1600,7 +1587,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::blog.blog': ApiBlogBlog;
-      'api::book.book': ApiBookBook;
       'api::booking-confirmation.booking-confirmation': ApiBookingConfirmationBookingConfirmation;
       'api::booking-detail.booking-detail': ApiBookingDetailBookingDetail;
       'api::common-content.common-content': ApiCommonContentCommonContent;
