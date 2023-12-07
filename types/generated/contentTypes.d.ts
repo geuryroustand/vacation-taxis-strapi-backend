@@ -1143,6 +1143,12 @@ export interface ApiCommonContentCommonContent extends Schema.SingleType {
           localized: true;
         };
       }>;
+    DRLink: Attribute.Component<'global.link'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
