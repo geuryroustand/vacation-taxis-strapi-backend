@@ -29,5 +29,16 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  // ...
+  sitemap: {
+    enabled: true,
+    config: {
+      cron: "0 0 0 * * *",
+      limit: 7000,
+      xsl: true,
+      autoGenerate: false,
+      caching: true,
+      allowedFields: ["id", "uid"],
+      excludedTypes: [],
+    },
+  },
 });

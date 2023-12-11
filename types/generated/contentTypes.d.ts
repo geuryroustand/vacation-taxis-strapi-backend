@@ -420,6 +420,9 @@ export interface PluginUploadFile extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
   };
 }
 
@@ -475,6 +478,91 @@ export interface PluginUploadFolder extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'plugin::upload.folder',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface PluginSitemapSitemap extends Schema.CollectionType {
+  collectionName: 'sitemap';
+  info: {
+    singularName: 'sitemap';
+    pluralName: 'sitemaps';
+    displayName: 'sitemap';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    sitemap_string: Attribute.Text & Attribute.Required;
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'default'>;
+    type: Attribute.Enumeration<['default_hreflang', 'index']> &
+      Attribute.DefaultTo<'default_hreflang'>;
+    delta: Attribute.Integer & Attribute.DefaultTo<1>;
+    link_count: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::sitemap.sitemap',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::sitemap.sitemap',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface PluginSitemapSitemapCache extends Schema.CollectionType {
+  collectionName: 'sitemap_cache';
+  info: {
+    singularName: 'sitemap-cache';
+    pluralName: 'sitemap-caches';
+    displayName: 'sitemap-cache';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    sitemap_json: Attribute.JSON & Attribute.Required;
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'default'>;
+    sitemap_id: Attribute.Integer & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::sitemap.sitemap-cache',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::sitemap.sitemap-cache',
       'oneToOne',
       'admin::user'
     > &
@@ -667,6 +755,9 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
   };
 }
 
@@ -721,6 +812,9 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::about-us.about-us',
       'oneToMany',
@@ -788,6 +882,9 @@ export interface ApiBlogBlog extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::blog.blog',
       'oneToMany',
@@ -842,6 +939,9 @@ export interface ApiBookingConfirmationBookingConfirmation
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::booking-confirmation.booking-confirmation',
       'oneToMany',
@@ -1045,6 +1145,9 @@ export interface ApiBookingDetailBookingDetail extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::booking-detail.booking-detail',
       'oneToMany',
@@ -1164,6 +1267,9 @@ export interface ApiCommonContentCommonContent extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::common-content.common-content',
       'oneToMany',
@@ -1289,6 +1395,9 @@ export interface ApiContactUsContactUs extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::contact-us.contact-us',
       'oneToMany',
@@ -1372,6 +1481,9 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::home-page.home-page',
       'oneToMany',
@@ -1431,6 +1543,9 @@ export interface ApiPrivacyNoticePrivacyNotice extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::privacy-notice.privacy-notice',
       'oneToMany',
@@ -1504,6 +1619,9 @@ export interface ApiSeoLocationSeoLocation extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::seo-location.seo-location',
       'oneToMany',
@@ -1566,6 +1684,9 @@ export interface ApiTermsAndConditionTermsAndCondition
       'admin::user'
     > &
       Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
     localizations: Attribute.Relation<
       'api::terms-and-condition.terms-and-condition',
       'oneToMany',
@@ -1587,6 +1708,8 @@ declare module '@strapi/types' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
+      'plugin::sitemap.sitemap': PluginSitemapSitemap;
+      'plugin::sitemap.sitemap-cache': PluginSitemapSitemapCache;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;

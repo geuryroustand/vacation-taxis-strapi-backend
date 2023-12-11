@@ -10,6 +10,7 @@
   "scripts": {
     "build": "strapi build",
     "develop": "strapi develop",
+    "sitemap": "strapi-sitemap",
     "start": "strapi start",
     "strapi": "strapi"
   },
@@ -25,6 +26,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",
+    "strapi-plugin-sitemap": "^3.0.6",
     "styled-components": "^5.3.11"
   },
   "engines": {
