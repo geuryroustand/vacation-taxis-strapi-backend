@@ -37,7 +37,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "maxLength": 185
     },
     "description": {
       "type": "richtext",

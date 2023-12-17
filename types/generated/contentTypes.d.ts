@@ -855,6 +855,9 @@ export interface ApiBlogBlog extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+      }> &
+      Attribute.SetMinMaxLength<{
+        maxLength: 185;
       }>;
     description: Attribute.RichText &
       Attribute.SetPluginOptions<{
