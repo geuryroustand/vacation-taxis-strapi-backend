@@ -126,8 +126,7 @@
           "localized": true
         }
       },
-      "type": "uid",
-      "targetField": "title"
+      "type": "string"
     }
   }
 }

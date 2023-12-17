@@ -4,7 +4,8 @@
   "info": {
     "singularName": "terms-and-condition",
     "pluralName": "terms-and-conditions",
-    "displayName": "termsAndCondition"
+    "displayName": "termsAndCondition",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,15 +24,6 @@
       },
       "type": "string"
     },
-    "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "uid",
-      "targetField": "title"
-    },
     "description": {
       "pluginOptions": {
         "i18n": {
@@ -39,6 +31,14 @@
         }
       },
       "type": "richtext"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }

@@ -778,13 +778,6 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
     };
   };
   attributes: {
-    slug: Attribute.UID &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     content: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -792,6 +785,12 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
         };
       }>;
     title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1025,12 +1024,6 @@ export interface ApiBookingDetailBookingDetail extends Schema.SingleType {
           localized: true;
         };
       }>;
-    slug: Attribute.UID<'api::booking-detail.booking-detail', 'title'> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     loadingSpinner: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1128,6 +1121,12 @@ export interface ApiBookingDetailBookingDetail extends Schema.SingleType {
         };
       }>;
     passengerInfo: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1377,7 +1376,7 @@ export interface ApiContactUsContactUs extends Schema.SingleType {
           localized: true;
         };
       }>;
-    slug: Attribute.UID<'api::contact-us.contact-us', 'title'> &
+    slug: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1525,7 +1524,7 @@ export interface ApiPrivacyNoticePrivacyNotice extends Schema.SingleType {
           localized: true;
         };
       }>;
-    slug: Attribute.UID<'api::privacy-notice.privacy-notice', 'title'> &
+    slug: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1641,6 +1640,7 @@ export interface ApiTermsAndConditionTermsAndCondition
     singularName: 'terms-and-condition';
     pluralName: 'terms-and-conditions';
     displayName: 'termsAndCondition';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1657,16 +1657,13 @@ export interface ApiTermsAndConditionTermsAndCondition
           localized: true;
         };
       }>;
-    slug: Attribute.UID<
-      'api::terms-and-condition.terms-and-condition',
-      'title'
-    > &
+    description: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    description: Attribute.RichText &
+    slug: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
