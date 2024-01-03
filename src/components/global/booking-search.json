@@ -26,6 +26,12 @@
     },
     "pickUpText": {
       "type": "string"
+    },
+    "dateLabelArrival": {
+      "type": "string"
+    },
+    "dateLabelDeparture": {
+      "type": "string"
     }
   }
 }

@@ -60,6 +60,8 @@ export interface GlobalBookingSearch extends Schema.Component {
     isEmptyFeedbackPickUp: Attribute.String;
     isEmptyFeedbackDropOff: Attribute.String;
     pickUpText: Attribute.String;
+    dateLabelArrival: Attribute.String;
+    dateLabelDeparture: Attribute.String;
   };
 }
 
