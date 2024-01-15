@@ -1132,6 +1132,12 @@ export interface ApiBookingDetailBookingDetail extends Schema.SingleType {
           localized: true;
         };
       }>;
+    at: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -239,6 +239,14 @@
         }
       },
       "type": "string"
+    },
+    "at": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
