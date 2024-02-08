@@ -23,6 +23,21 @@ export interface CardCard extends Schema.Component {
   };
 }
 
+export interface ElementsShareRide extends Schema.Component {
+  collectionName: 'components_elements_share_rides';
+  info: {
+    displayName: 'ShareRide';
+  };
+  attributes: {
+    pickUp: Attribute.String;
+    dropOff: Attribute.String;
+    date: Attribute.Date;
+    time: Attribute.Time;
+    qtyOfTravelers: Attribute.Integer;
+    price: Attribute.Integer;
+  };
+}
+
 export interface FlightDetailFlightDetail extends Schema.Component {
   collectionName: 'components_flight_detail_flight_details';
   info: {
@@ -222,6 +237,18 @@ export interface PaymentPayment extends Schema.Component {
   };
 }
 
+export interface PersonalInfoPersonalInfo extends Schema.Component {
+  collectionName: 'components_personal_info_personal_infos';
+  info: {
+    displayName: 'PersonalInfo';
+  };
+  attributes: {
+    firstName: Attribute.String;
+    lastName: Attribute.String;
+    email: Attribute.String;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -319,6 +346,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'card.card': CardCard;
+      'elements.share-ride': ElementsShareRide;
       'flight-detail.flight-detail': FlightDetailFlightDetail;
       'global.awards': GlobalAwards;
       'global.booking-search': GlobalBookingSearch;
@@ -334,6 +362,7 @@ declare module '@strapi/types' {
       'how-it-work.how-it-work': HowItWorkHowItWork;
       'passenger-detail.passenger-detail': PassengerDetailPassengerDetail;
       'payment.payment': PaymentPayment;
+      'personal-info.personal-info': PersonalInfoPersonalInfo;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
       'top-locations.top-locations': TopLocationsTopLocations;

@@ -62,6 +62,18 @@
       "target": "plugin::users-permissions.role",
       "inversedBy": "users",
       "configurable": false
+    },
+    "share_rides": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::request-shared-ride.request-shared-ride",
+      "mappedBy": "user"
+    },
+    "share_ride": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::share-ride.share-ride",
+      "mappedBy": "user"
     }
   }
 }

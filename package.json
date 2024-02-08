@@ -26,6 +26,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",
+    "strapi-plugin-comments": "^2.2.15",
     "strapi-plugin-sitemap": "^3.0.6",
     "styled-components": "^5.3.11"
   },

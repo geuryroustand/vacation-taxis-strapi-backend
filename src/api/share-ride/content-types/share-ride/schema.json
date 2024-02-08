@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "share_rides",
+  "info": {
+    "singularName": "share-ride",
+    "pluralName": "share-rides",
+    "displayName": "ShareRide",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pickUp": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "dropOff": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "date": {
+      "pluginOptions": {},
+      "type": "date"
+    },
+    "time": {
+      "pluginOptions": {},
+      "type": "time"
+    },
+    "qtyOfTravelers": {
+      "pluginOptions": {},
+      "type": "integer"
+    },
+    "price": {
+      "pluginOptions": {},
+      "type": "integer"
+    },
+    "requestOrPost": {
+      "pluginOptions": {},
+      "type": "enumeration",
+      "enum": [
+        "request",
+        "post"
+      ]
+    },
+    "oneWayOrRoundTrip": {
+      "pluginOptions": {},
+      "type": "enumeration",
+      "enum": [
+        "oneWay",
+        "roundTrip"
+      ]
+    },
+    "travelInfo": {
+      "pluginOptions": {},
+      "type": "text"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "share_ride"
+    },
+    "airlineName": {
+      "type": "string"
+    },
+    "flightNumber": {
+      "type": "string"
+    },
+    "hasFlight": {
+      "type": "enumeration",
+      "enum": [
+        "yes",
+        "no"
+      ]
+    }
+  }
+}

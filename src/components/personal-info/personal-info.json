@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_personal_info_personal_infos",
+  "info": {
+    "displayName": "PersonalInfo"
+  },
+  "options": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}
