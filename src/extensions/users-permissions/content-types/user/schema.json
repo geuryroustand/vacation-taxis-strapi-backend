@@ -74,6 +74,14 @@
       "relation": "oneToMany",
       "target": "api::share-ride.share-ride",
       "mappedBy": "user"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
