@@ -1,8 +1,12 @@
-// "use strict";
-// const sgMail = require("@sendgrid/mail");
-// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+"use strict";
+const sgMail = require("@sendgrid/mail");
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// const { createCoreController } = require("@strapi/strapi").factories;
+const { createCoreController } = require("@strapi/strapi").factories;
+
+module.exports = createCoreController(
+  "api::request-shared-ride.request-shared-ride"
+);
 
 // module.exports = createCoreController(
 //   "api::request-shared-ride.request-shared-ride",
