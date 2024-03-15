@@ -1,15 +1,16 @@
 module.exports = (plugin) => {
   const originalPost = plugin.controllers.client.post;
+  // const findAllCommentByPost = plugin.controllers.client.findAllInHierarchy;
 
   plugin.controllers.client.post = async (ctx) => {
     try {
-      const { request, params } = ctx;
+      const { params } = ctx;
 
       const postId = params.relation.split(":")[3];
 
       // Retrieve the post associated with the comment
 
-      const postQuery = await strapi.entityService.findOne(
+      const findPostOrRequest = await strapi.entityService.findOne(
         "api::share-ride.share-ride",
         postId,
         {
@@ -17,12 +18,25 @@ module.exports = (plugin) => {
         }
       );
 
+      // const findCommentByPostOrRequest = await strapi.entityService.findOne(
+      //   "plugin::comments.comment",
+      //   postId
+      // );
+
       const comment = await originalPost.call(plugin.controllers.client, ctx);
 
-      if (comment && postQuery) {
-        const { user } = postQuery;
+      // const findAllCommentsInPost = await findAllCommentByPost.call(
+      //   plugin.controllers.client,
+      //   {
+      //     params: {
+      //       0: `api/comments/api::share-ride.share-ride:${postId}`,
+      //       relation: `api::share-ride.share-ride:${postId}`,
+      //     },
+      //   }
+      // );
 
-        // Compose email message
+      if (comment && findPostOrRequest) {
+        const { user } = findPostOrRequest;
 
         const emailMessage = `
 
