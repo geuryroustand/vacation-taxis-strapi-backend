@@ -1502,6 +1502,18 @@ export interface ApiCommonContentCommonContent extends Schema.SingleType {
           localized: true;
         };
       }>;
+    carpool: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    carpoolLinks: Attribute.Component<'top-locations.top-locations', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -139,6 +139,24 @@
         }
       },
       "component": "global.link"
+    },
+    "carpool": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "carpoolLinks": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "top-locations.top-locations"
     }
   }
 }
