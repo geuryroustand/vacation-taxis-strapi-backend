@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_benefits_s",
+  "info": {
+    "displayName": "benefits ",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "rounderColor": {
+      "type": "string"
+    },
+    "iconName": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

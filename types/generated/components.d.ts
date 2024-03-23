@@ -23,6 +23,20 @@ export interface CardCard extends Schema.Component {
   };
 }
 
+export interface ElementsBenefits extends Schema.Component {
+  collectionName: 'components_elements_benefits_s';
+  info: {
+    displayName: 'benefits ';
+    description: '';
+  };
+  attributes: {
+    rounderColor: Attribute.String;
+    iconName: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface ElementsShareRide extends Schema.Component {
   collectionName: 'components_elements_share_rides';
   info: {
@@ -307,7 +321,7 @@ export interface TopLocationsTopLocations extends Schema.Component {
     description: '';
   };
   attributes: {
-    locations: Attribute.String & Attribute.Required & Attribute.Unique;
+    locations: Attribute.String & Attribute.Required;
     slug: Attribute.String & Attribute.Required;
     hiden: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
@@ -346,6 +360,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'card.card': CardCard;
+      'elements.benefits': ElementsBenefits;
       'elements.share-ride': ElementsShareRide;
       'flight-detail.flight-detail': FlightDetailFlightDetail;
       'global.awards': GlobalAwards;

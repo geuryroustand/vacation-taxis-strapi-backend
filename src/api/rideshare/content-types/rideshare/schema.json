@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "common_contents",
+  "collectionName": "rideshares",
   "info": {
-    "singularName": "common-content",
-    "pluralName": "common-contents",
-    "displayName": "global",
+    "singularName": "rideshare",
+    "pluralName": "rideshares",
+    "displayName": "Rideshare",
     "description": ""
   },
   "options": {
@@ -16,113 +16,7 @@
     }
   },
   "attributes": {
-    "topLocations": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "TopLocations": {
-      "type": "component",
-      "repeatable": true,
-      "component": "global.navigation",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "company": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "Company": {
-      "type": "component",
-      "repeatable": true,
-      "component": "global.navigation",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "Footer": {
-      "type": "component",
-      "repeatable": true,
-      "component": "global.footer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "helpCenter": {
-      "type": "component",
-      "repeatable": false,
-      "component": "global.link",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "blogs": {
-      "type": "component",
-      "repeatable": false,
-      "component": "global.link",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "bookingSearch": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "global.booking-search"
-    },
-    "oneWayAndRoundTrip": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "way.one-way"
-    },
-    "award": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "global.awards"
-    },
-    "faq": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "global.faq"
-    },
-    "faqHeading": {
+    "tripInformation": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -130,17 +24,7 @@
       },
       "type": "string"
     },
-    "DRLink": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "global.link"
-    },
-    "carpool": {
+    "to": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -148,15 +32,85 @@
       },
       "type": "string"
     },
-    "carpoolLinks": {
-      "type": "component",
-      "repeatable": true,
+    "passengerText": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "top-locations.top-locations"
+      "type": "string"
+    },
+    "trip": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "airlineNameText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "flightNumberText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "dateText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "timeText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "commentHeading": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "sendToMessage": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "placeHolderText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "leaveCommentText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     },
     "loginText": {
       "pluginOptions": {
@@ -166,7 +120,7 @@
       },
       "type": "string"
     },
-    "signUpText": {
+    "or": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -174,7 +128,7 @@
       },
       "type": "string"
     },
-    "movilNavHeadingText": {
+    "createText": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -182,7 +136,39 @@
       },
       "type": "string"
     },
-    "signOutText": {
+    "detail": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "errorMessageText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "serverErrorMessageText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "buttonText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "loadingStateText": {
       "pluginOptions": {
         "i18n": {
           "localized": true
