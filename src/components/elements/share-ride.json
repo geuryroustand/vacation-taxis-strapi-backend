@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_share_rides",
+  "info": {
+    "displayName": "ShareRide"
+  },
+  "options": {},
+  "attributes": {
+    "pickUp": {
+      "type": "string"
+    },
+    "dropOff": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "time"
+    },
+    "qtyOfTravelers": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "integer"
+    }
+  }
+}

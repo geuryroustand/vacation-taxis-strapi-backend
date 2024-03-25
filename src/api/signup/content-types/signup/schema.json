@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "common_contents",
+  "collectionName": "signups",
   "info": {
-    "singularName": "common-content",
-    "pluralName": "common-contents",
-    "displayName": "global",
+    "singularName": "signup",
+    "pluralName": "signups",
+    "displayName": "Signup",
     "description": ""
   },
   "options": {
@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "topLocations": {
+    "heading": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -24,17 +24,7 @@
         }
       }
     },
-    "TopLocations": {
-      "type": "component",
-      "repeatable": true,
-      "component": "global.navigation",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "company": {
+    "authBtnText": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -42,87 +32,55 @@
         }
       }
     },
-    "Company": {
-      "type": "component",
-      "repeatable": true,
-      "component": "global.navigation",
+    "inputUserName": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "Footer": {
-      "type": "component",
-      "repeatable": true,
-      "component": "global.footer",
+    "inputUserErrorMessage": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "helpCenter": {
-      "type": "component",
-      "repeatable": false,
-      "component": "global.link",
+    "inputEmail": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "blogs": {
-      "type": "component",
-      "repeatable": false,
-      "component": "global.link",
+    "inputEmailErrorMessage": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "bookingSearch": {
-      "type": "component",
-      "repeatable": false,
+    "inputPassword": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "global.booking-search"
+      }
     },
-    "oneWayAndRoundTrip": {
-      "type": "component",
-      "repeatable": false,
+    "inputPasswordErrorMessage": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "way.one-way"
+      }
     },
-    "award": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "global.awards"
-    },
-    "faq": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "global.faq"
-    },
-    "faqHeading": {
+    "buttonText": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -130,17 +88,7 @@
       },
       "type": "string"
     },
-    "DRLink": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "global.link"
-    },
-    "carpool": {
+    "agreeText": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -148,17 +96,7 @@
       },
       "type": "string"
     },
-    "carpoolLinks": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "top-locations.top-locations"
-    },
-    "loginText": {
+    "termsText": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -166,7 +104,7 @@
       },
       "type": "string"
     },
-    "signUpText": {
+    "andText": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -174,7 +112,7 @@
       },
       "type": "string"
     },
-    "movilNavHeadingText": {
+    "privacyText": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -182,7 +120,47 @@
       },
       "type": "string"
     },
-    "signOutText": {
+    "haveAnAccountText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "signInText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "emailShareText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "or": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "createText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "btnLoadingState": {
       "pluginOptions": {
         "i18n": {
           "localized": true

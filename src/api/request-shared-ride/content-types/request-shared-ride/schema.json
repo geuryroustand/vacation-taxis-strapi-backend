@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "request_shared_rides",
+  "info": {
+    "singularName": "request-shared-ride",
+    "pluralName": "request-shared-rides",
+    "displayName": "RequestAndPostShareRide ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "arrivalDate": {
+      "type": "date",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "arrivalTime": {
+      "type": "time",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "pickUpLocation": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "dropOffLocation": {
+      "type": "string",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "arrivalQtyOfTraveler": {
+      "type": "integer",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "share_rides"
+    },
+    "departureDate": {
+      "type": "date",
+      "pluginOptions": {}
+    },
+    "departureTime": {
+      "type": "time",
+      "pluginOptions": {}
+    },
+    "returnDropOffLocation": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "returnPickUpLocation": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "requestOrPost": {
+      "type": "enumeration",
+      "enum": [
+        "request",
+        "post"
+      ],
+      "required": true,
+      "pluginOptions": {}
+    },
+    "oneWayOrRoundTrip": {
+      "type": "enumeration",
+      "enum": [
+        "oneWay",
+        "roundTrip"
+      ],
+      "required": true,
+      "pluginOptions": {}
+    },
+    "arrivalPrice": {
+      "type": "decimal",
+      "pluginOptions": {}
+    },
+    "departurePrice": {
+      "type": "decimal",
+      "pluginOptions": {}
+    },
+    "travelInfo": {
+      "type": "text",
+      "pluginOptions": {}
+    },
+    "departureQtyOfTraveler": {
+      "type": "integer",
+      "pluginOptions": {}
+    }
+  }
+}
