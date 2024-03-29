@@ -74,6 +74,9 @@
         "yes",
         "no"
       ]
+    },
+    "zone": {
+      "type": "string"
     }
   }
 }

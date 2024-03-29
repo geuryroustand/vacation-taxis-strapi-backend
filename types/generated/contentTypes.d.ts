@@ -2234,6 +2234,12 @@ export interface ApiOfferOrRequestTripOfferOrRequestTrip
           localized: true;
         };
       }>;
+    zone: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2716,6 +2722,7 @@ export interface ApiShareRideShareRide extends Schema.CollectionType {
     airlineName: Attribute.String;
     flightNumber: Attribute.String;
     hasFlight: Attribute.Enumeration<['yes', 'no']>;
+    zone: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
